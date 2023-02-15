@@ -1,0 +1,1586 @@
+{
+	"info": {
+		"_postman_id": "1bb878da-d6d4-4139-a309-24b4b5e7734a",
+		"name": "fiverr",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24560016"
+	},
+	"item": [
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "\r\n{\r\n    \"name\": \"thien\",\r\n    \"email\": \"thien@gmail.com\",\r\n    \"password\": \"abc123@X\",\r\n    \"phone\": null,\r\n    \"birthday\": \"0\",\r\n    \"avatar\": null,\r\n    \"gender\": true,\r\n    \"role\": \"user\",\r\n    \"skill\": \"\",\r\n    \"certification\": \"\"\r\n}\r\n\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:4000/api/v1/auth/register",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "\r\n{\r\n  \"email\": \"admin@gmail.com\",\r\n  \"password\": \"abc123@X\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:4000/api/v1/auth/login",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "get list user",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhZG1pbkBnbWFpbC5jb20iLCJpYXQiOjE2NzYxMjU0MDksImV4cCI6MTY3NjIxMTgwOX0.zwZxDkQsS4son0NU5oNs77b_bMivd46aPbEwOkFlgmg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:4000/api/v1/user",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"v1",
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get user",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhZG1pbkBnbWFpbC5jb20iLCJpYXQiOjE2NzYxMjU0MDksImV4cCI6MTY3NjIxMTgwOX0.zwZxDkQsS4son0NU5oNs77b_bMivd46aPbEwOkFlgmg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:4000/api/v1/user/2",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "search user",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhZG1pbkBnbWFpbC5jb20iLCJpYXQiOjE2NzYxMjU0MDksImV4cCI6MTY3NjIxMTgwOX0.zwZxDkQsS4son0NU5oNs77b_bMivd46aPbEwOkFlgmg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:4000/api/v1/user/search/a",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"search",
+								"a"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "paging user",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhZG1pbkBnbWFpbC5jb20iLCJpYXQiOjE2NzYxMjU0MDksImV4cCI6MTY3NjIxMTgwOX0.zwZxDkQsS4son0NU5oNs77b_bMivd46aPbEwOkFlgmg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:4000/api/v1/user/paging?pageIndex=2&pageSize=2&keyword=n",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"paging"
+							],
+							"query": [
+								{
+									"key": "pageIndex",
+									"value": "2"
+								},
+								{
+									"key": "pageSize",
+									"value": "2"
+								},
+								{
+									"key": "keyword",
+									"value": "n"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "created user",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhZG1pbkBnbWFpbC5jb20iLCJpYXQiOjE2NzYxMjU0MDksImV4cCI6MTY3NjIxMTgwOX0.zwZxDkQsS4son0NU5oNs77b_bMivd46aPbEwOkFlgmg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"hai\",\r\n    \"email\": \"hai@gmail.com\",\r\n    \"password\": \"abc123@X\",\r\n    \"phone\": null,\r\n    \"birthday\": \"0\",\r\n    \"avatar\": null,\r\n    \"gender\": true,\r\n    \"role\": \"user\",\r\n    \"skill\": \"\",\r\n    \"certification\": \"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:4000/api/v1/user",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"v1",
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update user",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhZG1pbkBnbWFpbC5jb20iLCJpYXQiOjE2NzYxMjU0MDksImV4cCI6MTY3NjIxMTgwOX0.zwZxDkQsS4son0NU5oNs77b_bMivd46aPbEwOkFlgmg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"nam\",\r\n    \"email\": \"nam@gmail.com\",\r\n    \"password\": \"abc123@X\",\r\n    \"phone\": null,\r\n    \"birthday\": \"18\",\r\n    \"avatar\": null,\r\n    \"gender\": true,\r\n    \"role\": \"user\",\r\n    \"skill\": \"\",\r\n    \"certification\": \"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:4000/api/v1/user/3",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete user",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhZG1pbkBnbWFpbC5jb20iLCJpYXQiOjE2NzYxMjU0MDksImV4cCI6MTY3NjIxMTgwOX0.zwZxDkQsS4son0NU5oNs77b_bMivd46aPbEwOkFlgmg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:4000/api/v1/user/5",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "upload avatar",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhZG1pbkBnbWFpbC5jb20iLCJpYXQiOjE2NzYxMjU0MDksImV4cCI6MTY3NjIxMTgwOX0.zwZxDkQsS4son0NU5oNs77b_bMivd46aPbEwOkFlgmg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/C:/Users/thanp/Desktop/hot girl.jpeg"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:4000/api/v1/user/uploadavatar/1",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"uploadavatar",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Job",
+			"item": [
+				{
+					"name": "get list job",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:4000/api/v1/job",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"v1",
+								"job"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get job",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:4000/api/v1/job/1",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"v1",
+								"job",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "paging job",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:4000/api/v1/job/paging?pageIndex=1&pageSize=2&keyword=a",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"v1",
+								"job",
+								"paging"
+							],
+							"query": [
+								{
+									"key": "pageIndex",
+									"value": "1"
+								},
+								{
+									"key": "pageSize",
+									"value": "2"
+								},
+								{
+									"key": "keyword",
+									"value": "a"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "created job",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhZG1pbkBnbWFpbC5jb20iLCJpYXQiOjE2NzYxMjU0MDksImV4cCI6MTY3NjIxMTgwOX0.zwZxDkQsS4son0NU5oNs77b_bMivd46aPbEwOkFlgmg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"jobName\": \"I will create an effective instagram hashtag growth strategy 4\",\r\n    \"assess\": 542,\r\n    \"price\": 20,\r\n    \"image\": \"https://fiverrnew.cybersoft.edu.vn/images/cv5.jpg\",\r\n    \"description\": \"\\nHi There,\\r\\n\\r\\n\\r\\n\\r\\nHave You Been Looking for a Brand Logo with Complete Corporate Brand Identity?\\r\\n\\r\\n\\r\\n\\r\\nHi, I am Talha, a Passionate Professional Graphic Designer designing brand logos & brand Identity for many Years, I have successfully designed brand logos with the complete corporate brand identity for different brands around the world.\\r\\n\\r\\n\\r\\n\\r\\nI also would love to do demanded designs, Just leave your request, I will respond instantly.\",\r\n    \"shortDesc\": \"#40 + organic growth strategy\\r\\nUS$20\\r\\n🎯 40# + Personalized Growth Strategy + Hashtag Guide + News List & Tools + Account Optimization\\r\\n\\r\\n3 Days Delivery\\r\\nPage/channel evaluation\\r\\nAction plan\",\r\n    \"jobRate\": 5,\r\n    \"jobDetailId\": 4\r\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:4000/api/v1/job",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"v1",
+								"job"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update job",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhZG1pbkBnbWFpbC5jb20iLCJpYXQiOjE2NzYxMjU0MDksImV4cCI6MTY3NjIxMTgwOX0.zwZxDkQsS4son0NU5oNs77b_bMivd46aPbEwOkFlgmg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"jobName\": \"I will do modern logo design with premium brand identity 3\",\r\n    \"assess\": 442,\r\n    \"price\": 35,\r\n    \"image\": \"https://fiverrnew.cybersoft.edu.vn/images/cv4.jpg\",\r\n    \"description\": \"\\nHi There,\\r\\n\\r\\n\\r\\n\\r\\nHave You Been Looking for a Brand Logo with Complete Corporate Brand Identity?\\r\\n\\r\\n\\r\\n\\r\\nHi, I am Talha, a Passionate Professional Graphic Designer designing brand logos & brand Identity for many Years, I have successfully designed brand logos with the complete corporate brand identity for different brands around the world.\\r\\n\\r\\n\\r\\n\\r\\nI also would love to do demanded designs, Just leave your request, I will respond instantly.\",\r\n    \"shortDesc\": \"US$10\\r\\nSave up to 20% with Subscribe to Save\\r\\nBASIC CORPORATE BRAND IDENTITY Business Card + Letterhead + Compliment Design\\r\\n\\r\\n2 Days Delivery\\r\\nUnlimited Revisions\\r\\nIncludes logo design\\r\\nLogo usage guidelines\\r\\nColor palette\\r\\nTypography guidelines\",\r\n    \"jobRate\": 3,\r\n    \"jobDetailId\": 3\r\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:4000/api/v1/job/9",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"v1",
+								"job",
+								"9"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete job",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhZG1pbkBnbWFpbC5jb20iLCJpYXQiOjE2NzYxMjU0MDksImV4cCI6MTY3NjIxMTgwOX0.zwZxDkQsS4son0NU5oNs77b_bMivd46aPbEwOkFlgmg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:4000/api/v1/job/9",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"v1",
+								"job",
+								"9"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get menu job type",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:4000/api/v1/job/jobtype",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"v1",
+								"job",
+								"jobtype"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get detail job type",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:4000/api/v1/job/jobtype/2",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"v1",
+								"job",
+								"jobtype",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get job by job detail id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:4000/api/v1/job/jobdetail/2",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"v1",
+								"job",
+								"jobdetail",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get detail job",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:4000/api/v1/job/detail/1",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"v1",
+								"job",
+								"detail",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "search name job",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:4000/api/v1/job/search/I w",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"v1",
+								"job",
+								"search",
+								"I w"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update image job",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhZG1pbkBnbWFpbC5jb20iLCJpYXQiOjE2NzYxMjU0MDksImV4cCI6MTY3NjIxMTgwOX0.zwZxDkQsS4son0NU5oNs77b_bMivd46aPbEwOkFlgmg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/C:/Users/thanp/Desktop/chan usb.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:4000/api/v1/job/uploadimage/1",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"v1",
+								"job",
+								"uploadimage",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Job type",
+			"item": [
+				{
+					"name": "get list job type",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:4000/api/v1/jobtype",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"v1",
+								"jobtype"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get job type",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:4000/api/v1/jobtype/1",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"v1",
+								"jobtype",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "paging job type",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:4000/api/v1/jobtype/paging?pageIndex=1&pageSize=2&keyword=a",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"v1",
+								"jobtype",
+								"paging"
+							],
+							"query": [
+								{
+									"key": "pageIndex",
+									"value": "1"
+								},
+								{
+									"key": "pageSize",
+									"value": "2"
+								},
+								{
+									"key": "keyword",
+									"value": "a"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create job type",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhZG1pbkBnbWFpbC5jb20iLCJpYXQiOjE2NzYxMjU0MDksImV4cCI6MTY3NjIxMTgwOX0.zwZxDkQsS4son0NU5oNs77b_bMivd46aPbEwOkFlgmg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"jobTypeName\": \"Music & Audio 6\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:4000/api/v1/jobtype",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"v1",
+								"jobtype"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update job type",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhZG1pbkBnbWFpbC5jb20iLCJpYXQiOjE2NzYxMjU0MDksImV4cCI6MTY3NjIxMTgwOX0.zwZxDkQsS4son0NU5oNs77b_bMivd46aPbEwOkFlgmg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"jobTypeName\": \"Music & Audio 2\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:4000/api/v1/jobtype/6",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"v1",
+								"jobtype",
+								"6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete job type",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhZG1pbkBnbWFpbC5jb20iLCJpYXQiOjE2NzYxMjU0MDksImV4cCI6MTY3NjIxMTgwOX0.zwZxDkQsS4son0NU5oNs77b_bMivd46aPbEwOkFlgmg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:4000/api/v1/jobtype/7",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"v1",
+								"jobtype",
+								"7"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Job detail",
+			"item": [
+				{
+					"name": "get list job detail",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:4000/api/v1/jobdetail",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"v1",
+								"jobdetail"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get job detail",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:4000/api/v1/jobdetail/3",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"v1",
+								"jobdetail",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "paging job detail",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:4000/api/v1/jobdetail/paging?pageIndex=1&pageSize=2&keyword=a",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"v1",
+								"jobdetail",
+								"paging"
+							],
+							"query": [
+								{
+									"key": "pageIndex",
+									"value": "1"
+								},
+								{
+									"key": "pageSize",
+									"value": "2"
+								},
+								{
+									"key": "keyword",
+									"value": "a"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create job detail",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhZG1pbkBnbWFpbC5jb20iLCJpYXQiOjE2NzYxMjU0MDksImV4cCI6MTY3NjIxMTgwOX0.zwZxDkQsS4son0NU5oNs77b_bMivd46aPbEwOkFlgmg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n      \"jobDetailName\": \"Business Copy 8\",\r\n      \"image\": \"https://fiverrnew.cybersoft.edu.vn/images/lcv6.jpg\",\r\n      \"jobTypeId\": 3\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:4000/api/v1/jobdetail",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"v1",
+								"jobdetail"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update job detail",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhZG1pbkBnbWFpbC5jb20iLCJpYXQiOjE2NzYxMjU0MDksImV4cCI6MTY3NjIxMTgwOX0.zwZxDkQsS4son0NU5oNs77b_bMivd46aPbEwOkFlgmg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n      \"jobDetailName\": \"Business Copy 7\",\r\n      \"image\": \"https://fiverrnew.cybersoft.edu.vn/images/lcv7.jpg\",\r\n      \"jobTypeId\": 3\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:4000/api/v1/jobdetail/6",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"v1",
+								"jobdetail",
+								"6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete job detail",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhZG1pbkBnbWFpbC5jb20iLCJpYXQiOjE2NzYxMjU0MDksImV4cCI6MTY3NjIxMTgwOX0.zwZxDkQsS4son0NU5oNs77b_bMivd46aPbEwOkFlgmg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:4000/api/v1/jobdetail/7",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"v1",
+								"jobdetail",
+								"7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update image detail job",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhZG1pbkBnbWFpbC5jb20iLCJpYXQiOjE2NzYxMjU0MDksImV4cCI6MTY3NjIxMTgwOX0.zwZxDkQsS4son0NU5oNs77b_bMivd46aPbEwOkFlgmg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/C:/Users/thanp/Desktop/hot girl.jpeg"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:4000/api/v1/jobdetail/uploadimage/5",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"v1",
+								"jobdetail",
+								"uploadimage",
+								"5"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Comment",
+			"item": [
+				{
+					"name": "get list comment",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:4000/api/v1/comment",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"v1",
+								"comment"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get comment",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:4000/api/v1/comment/1",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"v1",
+								"comment",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "created comment",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhZG1pbkBnbWFpbC5jb20iLCJpYXQiOjE2NzYxMjU0MDksImV4cCI6MTY3NjIxMTgwOX0.zwZxDkQsS4son0NU5oNs77b_bMivd46aPbEwOkFlgmg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"jobId\": 10,\r\n  \"content\": \"ok all\",\r\n  \"commentRate\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:4000/api/v1/comment",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"v1",
+								"comment"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update comment",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhZG1pbkBnbWFpbC5jb20iLCJpYXQiOjE2NzYxMjU0MDksImV4cCI6MTY3NjIxMTgwOX0.zwZxDkQsS4son0NU5oNs77b_bMivd46aPbEwOkFlgmg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"jobId\": 6,\r\n  \"content\": \"ok\",\r\n  \"commentRate\": 4\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:4000/api/v1/comment",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"v1",
+								"comment"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete comment",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhZG1pbkBnbWFpbC5jb20iLCJpYXQiOjE2NzYxMjU0MDksImV4cCI6MTY3NjIxMTgwOX0.zwZxDkQsS4son0NU5oNs77b_bMivd46aPbEwOkFlgmg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"jobId\": 10\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:4000/api/v1/comment",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"v1",
+								"comment"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get job comment",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:4000/api/v1/comment/job/6",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"v1",
+								"comment",
+								"job",
+								"6"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Hire Job",
+			"item": [
+				{
+					"name": "get list hire job",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:4000/api/v1/hirejob",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"v1",
+								"hirejob"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get hire job",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:4000/api/v1/hirejob/1",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"v1",
+								"hirejob",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "paging hire job",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:4000/api/v1/hirejob/paging?pageIndex=1&pageSize=2",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"v1",
+								"hirejob",
+								"paging"
+							],
+							"query": [
+								{
+									"key": "pageIndex",
+									"value": "1"
+								},
+								{
+									"key": "pageSize",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get hired job list",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhZG1pbkBnbWFpbC5jb20iLCJpYXQiOjE2NzYxMjU0MDksImV4cCI6MTY3NjIxMTgwOX0.zwZxDkQsS4son0NU5oNs77b_bMivd46aPbEwOkFlgmg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:4000/api/v1/hirejob/hired",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"v1",
+								"hirejob",
+								"hired"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "created hire job",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhZG1pbkBnbWFpbC5jb20iLCJpYXQiOjE2NzYxMjU0MDksImV4cCI6MTY3NjIxMTgwOX0.zwZxDkQsS4son0NU5oNs77b_bMivd46aPbEwOkFlgmg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"jobId\": 3,\r\n    \"hireDate\": \"2023-02-08\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:4000/api/v1/hirejob",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"v1",
+								"hirejob"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update hire job",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhZG1pbkBnbWFpbC5jb20iLCJpYXQiOjE2NzYxMjU0MDksImV4cCI6MTY3NjIxMTgwOX0.zwZxDkQsS4son0NU5oNs77b_bMivd46aPbEwOkFlgmg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"jobId\": 3,\r\n    \"hireDate\": \"2023-02-08\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:4000/api/v1/hirejob",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"v1",
+								"hirejob"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "finish hire job",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhZG1pbkBnbWFpbC5jb20iLCJpYXQiOjE2NzYxMjU0MDksImV4cCI6MTY3NjIxMTgwOX0.zwZxDkQsS4son0NU5oNs77b_bMivd46aPbEwOkFlgmg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"jobId\": 3\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:4000/api/v1/hirejob/finish",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"v1",
+								"hirejob",
+								"finish"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete hire job",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhZG1pbkBnbWFpbC5jb20iLCJpYXQiOjE2NzYxMjU0MDksImV4cCI6MTY3NjIxMTgwOX0.zwZxDkQsS4son0NU5oNs77b_bMivd46aPbEwOkFlgmg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"jobId\": 3\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:4000/api/v1/hirejob",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"v1",
+								"hirejob"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
