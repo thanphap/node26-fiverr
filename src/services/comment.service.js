@@ -54,8 +54,8 @@ const createdComment = async (jobId, userId, data) => {
             throw new AppError(400, "Comment is existed");
         }
         else {
-            const createdcommemt = await job.addUserComment(user.userId, { through: { content: data.content, commentRate: data.commentRate } })
-            return createdcommemt;
+            await job.addUserComment(user.userId, { through: { content: data.content, commentRate: data.commentRate } })
+            return await job.getUserComments({ attributes: ["name", "avatar"] });
         }
     } catch (error) {
         throw error;
@@ -79,7 +79,7 @@ const updateComment = async (jobId, userId, data) => {
         else {
             // console.log(job.__proto__);
             await job.setUserComments(user.userId, { through: { content: data.content, commentRate: data.commentRate } })
-            return await job.getUserComments();
+            return await job.getUserComments({ attributes: ["name", "avatar"] });
         }
     } catch (error) {
         throw error;

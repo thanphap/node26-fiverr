@@ -15,6 +15,4 @@ userRouter.post('', authorization, requiredRole('admin'), createdUser());
 userRouter.put('/:userId', authorization, updateUser());
 userRouter.delete('/:userId', authorization, requiredRole('admin'), deleteUser());
 
-
-
 module.exports = userRouter;
