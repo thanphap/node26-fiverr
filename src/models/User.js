@@ -21,6 +21,13 @@ module.exports = (sequelize) => {
                 type: DataTypes.STRING,
                 allowNull: false,
                 unique: 'email',
+                set(value) {
+                    const pattern = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
+                    if (!pattern.test(value)) {
+                        throw new AppError(400, 'Email is not in the correct format');
+                    }
+                    this.setDataValue('email', value);
+                }
             },
             password: {
                 type: DataTypes.STRING,
